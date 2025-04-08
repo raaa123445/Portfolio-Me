@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'lang-about-text-3': 'ខ្ញុំមានចំណង់ចំណូលចិត្តខ្លាំងក្នុងការអភិវឌ្ឍគេហទំព័រ ហើយខ្ញុំមានភាពរួសរាយក្នុងការចូលរួមជាមួយក្រុមការងារនៅសាប៉ូល ហើយចង់ចូលរួមចំណែកក្នុងការអភិវឌ្ឍស្ថាប័ន និងរៀនបន្ថែមពីអ្នកជំនាញ។',
             'lang-skills-title': 'ជំនាញរបស់ខ្ញុំ',
             'lang-projects-title': 'គម្រោងរបស់ខ្ញុំ',
-            'lang-project1-title': 'ប្រព័ន្ធធនាគារ',
-            'lang-project1-desc': 'ប្រព័ន្ធធនាគារដែលបង្កើតឡើងដោយប្រើប្រាស់ C និង C++, មានមុខងារគ្រប់គ្រងគណនី និងដំណើរការប្រតិបត្តិការ។',
+            'lang-project1-title': 'ប្រព័ន្ធនាគារ',
+            'lang-project1-desc': 'ប្រព័ន្ធនាគារដែលបង្កើតឡើងដោយប្រើប្រាស់ C និង C++, មានមុខងារគ្រប់គ្រងគណនី និងដំណើរការប្រតិបត្តិការ។',
             'lang-project2-title': 'ប្រព័ន្ធលក់រថយន្ត',
             'lang-project2-desc': 'ប្រព័ន្ធលក់សម្រាប់ក្រុមហ៊ុនលក់រថយន្តដែលបង្កើតឡើងដោយប្រើ PHP Laravel។',
             'lang-project3-title': 'ប្រព័ន្ធគ្រប់គ្រងហាង',
@@ -153,4 +153,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navItems = document.querySelector('.nav-items');
+    
+    menuToggle.addEventListener('click', () => {
+        navItems.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-items') && !e.target.closest('.menu-toggle')) {
+            navItems.classList.remove('active');
+        }
+    });
