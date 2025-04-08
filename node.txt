@@ -1,0 +1,460 @@
+Build a Portfolio Website using | HTML, CSS & JS| Complete Responsive Portfolio html css 
+And please, 2 languages ​​are Khmer and English.
+(Have Dark Mode)
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --text-color: #333;
+    --bg-color: #fff;
+    --nav-bg: #f8f9fa;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+    --text-color: #fff;
+    --bg-color: #1a1a1a;
+    --nav-bg: #2d2d2d;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--nav-bg);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-items {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-items a:hover {
+    color: var(--primary-color);
+}
+
+#languageSelect {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+main {
+    margin-top: 80px;
+    padding: 2rem;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Home Section */
+#home {
+    min-height: calc(100vh - 80px);
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.home-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-picture {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+/* About Section */
+#about {
+    background-color: var(--nav-bg);
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Contact Section */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--nav-bg);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .home-text h1 {
+        font-size: 2rem;
+    }
+
+    .home-text p {
+        font-size: 1.2rem;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+
+#1. Home Page
+#2. About Page
+#3. Skills Page
+#4. Projects Page
+#5. Contact Page
+
+#1. Home Page
+![image](
+    const translations = {
+    en: {
+        'lang-home': 'Home',
+        'lang-about': 'About',
+        'lang-projects': 'Projects',
+        'lang-contact': 'Contact',
+        'lang-greeting': "Hi, I'm Raa",
+        'lang-intro': 'Web Developer & Designer',
+        'lang-social-follow': 'Follow me on:',
+        'lang-social-facebook': 'Facebook',
+        'lang-social-instagram': 'Instagram',
+        'lang-social-telegram': 'Telegram',
+        'lang-social-github': 'GitHub',
+        'lang-about-title': 'About Me',
+        'lang-about-text': "I'm a passionate web developer with experience in creating responsive and user-friendly websites.",
+        'lang-projects-title': 'My Projects',
+        'lang-contact-title': 'Contact Me',
+        'lang-footer': '© 2023 Raa. All rights reserved.',
+        'lang-skills': 'Skills',
+        'lang-resume': 'Download Resume'
+    },
+    km: {
+        'lang-home': 'ទំព័រដើម',
+        'lang-about': 'អំពីខ្ញុំ',
+        'lang-projects': 'គម្រោង',
+        'lang-contact': 'ទំនាក់ទំនង',
+        'lang-greeting': 'សួស្តី ខ្ញុំឈ្មោះ រ៉ា',
+        'lang-intro': 'អ្នកអភិវឌ្ឍន៍គេហទំព័រ និង រចនា',
+        'lang-social-follow': 'តាមដានខ្ញុំនៅលើ៖',
+        'lang-social-facebook': 'ហ្វេសប៊ុក',
+        'lang-social-instagram': 'អ៊ីនស្តាក្រាម',
+        'lang-social-telegram': 'តេលេក្រាម',
+        'lang-social-github': 'ហ្គីតហាប',
+        'lang-about-title': 'អំពីខ្ញុំ',
+        'lang-about-text': 'ខ្ញុំជាអ្នកអភិវឌ្ឍន៍គេហទំព័រដែលមានបទពិសោធន៍ក្នុងការបង្កើតគេហទំព័រដែលមានភាពងាយស្រួលប្រើប្រាស់។',
+        'lang-projects-title': 'គម្រោងរបស់ខ្ញុំ',
+        'lang-contact-title': 'ទំនាក់ទំនងមកខ្ញុំ',
+        'lang-footer': '© ២០២៣ រ៉ា។ រក្សាសិទ្ធិគ្រប់យ៉ាង។',
+        'lang-skills': 'ជំនាញ',
+        'lang-resume': 'ទាញយកប្រវត្តិរូប'
+    }
+};
+
+// User preferences management
+const UserPreferences = {
+    getStoredLanguage() {
+        return localStorage.getItem('preferred-language') || 'en';
+    },
+    
+    setStoredLanguage(language) {
+        localStorage.setItem('preferred-language', language);
+    },
+    
+    getStoredTheme() {
+        return localStorage.getItem('theme-preference') || 'light';
+    },
+    
+    setStoredTheme(theme) {
+        localStorage.setItem('theme-preference', theme);
+    }
+};
+
+// Language management
+const LanguageManager = {
+    init() {
+        const languageSelect = document.getElementById('languageSelect');
+        const storedLanguage = UserPreferences.getStoredLanguage();
+        
+        languageSelect.value = storedLanguage;
+        this.updateLanguage(storedLanguage);
+        
+        languageSelect.addEventListener('change', (e) => {
+            const language = e.target.value;
+            this.updateLanguage(language);
+            UserPreferences.setStoredLanguage(language);
+        });
+    },
+
+    updateLanguage(language) {
+        const elements = document.querySelectorAll('[class*="lang-"]');
+        elements.forEach(element => {
+            const classes = Array.from(element.classList);
+            const langClass = classes.find(className => className.startsWith('lang-'));
+            if (langClass && translations[language][langClass]) {
+                element.textContent = translations[language][langClass];
+            }
+        });
+    }
+};
+
+// Theme management
+const ThemeManager = {
+    init() {
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const storedTheme = UserPreferences.getStoredTheme();
+        
+        if (storedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            this.updateThemeIcon(true);
+        }
+        
+        darkModeToggle.addEventListener('click', () => this.toggleTheme());
+    },
+
+    toggleTheme() {
+        const body = document.body;
+        const isDarkMode = body.classList.toggle('dark-mode');
+        this.updateThemeIcon(isDarkMode);
+        UserPreferences.setStoredTheme(isDarkMode ? 'dark' : 'light');
+    },
+
+    updateThemeIcon(isDarkMode) {
+        const icon = document.querySelector('#darkModeToggle i');
+        icon.classList.remove(isDarkMode ? 'fa-moon' : 'fa-sun');
+        icon.classList.add(isDarkMode ? 'fa-sun' : 'fa-moon');
+    }
+};
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    LanguageManager.init();
+    ThemeManager.init();
+});
+
+// Fade-in animation
+document.addEventListener('DOMContentLoaded', () => {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(element => observer.observe(element));
+});
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Dark mode toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode);
+    
+    // Update icon
+    const icon = darkModeToggle.querySelector('i');
+    icon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+});
+
+// Check saved dark mode preference
+if (localStorage.getItem('darkMode') === 'true') {
+    body.classList.add('dark-mode');
+    darkModeToggle.querySelector('i').className = 'fas fa-sun';
+}
+
+// Language switcher
+const languageSelect = document.getElementById('languageSelect');
+const translations = {
+    en: {
+        home: 'Home',
+        about: 'About',
+        projects: 'Projects',
+        contact: 'Contact',
+        greeting: 'Hi, I\'m Raa',
+        intro: 'Web Developer & Designer',
+        cv: 'Download CV',
+        socialFollow: 'Follow me on:',
+        aboutTitle: 'About Me',
+        projectsTitle: 'My Projects',
+        contactTitle: 'Contact Me'
+    },
+    km: {
+        home: 'ទំព័រដើម',
+        about: 'អំពីខ្ញុំ',
+        projects: 'គម្រោង',
+        contact: 'ទំនាក់ទំនង',
+        greeting: 'សួស្តី ខ្ញុំឈ្មោះ រ៉ា',
+        intro: 'អ្នកអភិវឌ្ឍន៍គេហទំព័រ និង រចនា',
+        cv: 'ទាញយក CV',
+        socialFollow: 'តាមដានខ្ញុំនៅលើ៖',
+        aboutTitle: 'អំពីខ្ញុំ',
+        projectsTitle: 'គម្រោងរបស់ខ្ញុំ',
+        contactTitle: 'ទំនាក់ទំនងមកខ្ញុំ'
+    }
+};
+
+languageSelect.addEventListener('change', (e) => {
+    const lang = e.target.value;
+    document.querySelectorAll('[class*="lang-"]').forEach(element => {
+        const key = element.className.split('lang-')[1];
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+    localStorage.setItem('language', lang);
+});
+
+// Check saved language preference
+const savedLang = localStorage.getItem('language') || 'en';
+languageSelect.value = savedLang;
+languageSelect.dispatchEvent(new Event('change'));
